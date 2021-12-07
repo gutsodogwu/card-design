@@ -1,0 +1,475 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box;  */
+}
+body {
+    font-family: 'Outfit', sans-serif;
+    background: rgb(111, 111, 111);
+}
+/* explicitly define the container properties */
+.container {
+ display: flex;
+ margin: 1em auto;
+ width: 85%;
+ /* border: 2px grey solid; */
+ height: 90vh;
+}
+
+/* ...............................................Navigation Area............................................... */
+.nav-area {
+    background: rgb(35, 35, 35);
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    /* border: 1px solid grey; */
+    padding-top: 1.5em; 
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.image-area {
+    border-radius: 50%;
+    border: 0.2em solid grey;
+    width: 3.8em;
+    height: 3.8em;
+    /* background-image: url('32037470.jpg');
+    background-position: center; */
+    margin-bottom: 1em;
+    margin-left:1.9em;
+    /* border: 2px solid black; */
+
+}
+.image-area img {
+    border-radius: 50%;
+    width: 3.8em;
+    height: 3.8em;
+}
+.nav-area .user-name {
+    color: #ffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    height: 5%;
+    padding-left: 1.9em;
+    /* border: 2px solid black; */
+}
+.nav-area .user-email {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgb(111, 111, 111);
+    height: 5%;
+    padding-left: 2.9857em;
+    /* border: 2px solid black; */
+    
+}
+.nav-area nav {
+    margin-top: 2.5em;
+    height: 70%;
+    /* border: 2px solid black; */
+}
+nav ul  {
+    text-decoration: none;
+    list-style: none;
+    color: rgb(111, 111, 111);
+    font-weight: 600;
+}
+nav ul .iconify-inline {
+    color: rgb(173, 173, 173);
+    /* display: inline-block; */
+    padding-right: 1.2em;
+
+}
+
+
+nav .ul1 li {
+    /* border: 2px solid black; */
+    padding-left: 1.9em;
+    margin-bottom: 1.2em;
+}
+
+nav .ul2 {
+    margin-top: 9.5em;
+    padding-left: 1.9em;
+}
+
+
+/*--------------------------------------------------------------- Main Area------------------------------------------------------------------------------------- */
+
+.main-area{
+    padding: 1.6em;
+    width: 50%;
+    background: white;
+    /* border: 1px solid grey; */
+}
+
+/* main area header */
+
+ .main-area header {
+     position: relative;
+     margin-bottom: 1.5em;
+ }
+
+ .main-area .fas {
+     background-color: rgb(247, 247, 247);
+     border-radius: 0.39em;
+     padding: 0.9em;
+     position: absolute;
+     top: 0;
+     right: 0;
+
+ }
+
+ .main-area .update {
+    /* height: 3.2em;
+    width: 8.0em; */
+    position: absolute;
+    top: 0;
+    right: 3.8em;
+    padding: 1.1em 3em;
+    color: white;
+    background-color: rgb(35, 35, 35);
+    border: none;
+    border-radius: 0.39em;
+ }
+
+ .main-area h1 {
+     font-size: 1.7rem;
+     font-weight: 700;
+ }
+ .main-area .date {
+
+     color: rgb(173, 173, 173);
+     font-weight: 500;
+ }
+
+ /* main header "your balance" */
+
+
+
+ .your-balance {
+     background-color: rgb(221, 239, 244);
+     /* border: 2px solid black; */
+     padding: 1.2em;
+     padding-right: 0;
+     border: none;
+     border-radius: 0.39em;
+     margin-bottom: 0.8em;
+     
+ }
+
+ .your-balance h5 {
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.your-balance h4 {
+    font-size: 0.8rem;
+    font-weight: 500;    
+}
+
+.your-balance h2 {
+    margin-top: 0.3em;
+    margin-bottom:0.3em;
+    font-weight: 700;
+}
+
+/* main header weekly transactions */
+
+
+.weekly-transaction section {
+    padding: 1em;    
+}
+
+.weekly-transaction section h5 {
+    font-weight: 500;
+    color: rgb(173, 173, 173);
+    margin-bottom: 0.3em;
+}
+
+.weekly-transaction {
+    display: flex;
+    border: 0.15em solid rgb(173, 173, 173,0.2);
+    border-radius: 0.39em;
+    height: 5em;
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.weekly-transaction .vertical-line {
+    display: inline-block;
+    border-left: 0.15em solid rgb(173, 173, 173,0.2);
+    position: absolute;
+    height: 3.5em;
+    top: 0.75em;
+}
+
+.vertical-line.first {
+    left: 25%;
+}
+
+.vertical-line.second {
+    left: 50%;
+}
+.vertical-line.third {
+    left: 75%;
+}
+
+
+.weekly-transaction .week-select-section {
+    width: 25%;
+    /* border: 1px solid black; */
+    position: relative;   
+}
+
+.weekly-transaction .week-select-section .last-week {
+    /* border: 1px thin black; */
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(40%,-50%); 
+}
+
+.weekly-transaction .week-select-section h4 {
+    font-weight: 700;
+    font-size: 0.9rem;
+    max-width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-120%,-50%);    
+
+} 
+
+
+.weekly-transaction .transaction-number {
+    width: 25%;
+    /* border: 1px solid black; */
+}
+
+
+
+.weekly-transaction .total-spent {
+    width: 25%;
+    /* border: 1px solid black; */
+}
+
+
+.weekly-transaction .cashback {
+    width: 25%;
+    /* border: 1px solid black; */
+}
+
+
+
+
+/* utilities structure and design */
+
+
+.utilities {
+    display: flex;
+    justify-content: space-between;
+    height: 6.5em;
+}
+
+.cafe-restaurant {
+    width: 29%;
+    /* border: 1px solid black; */
+    position: relative;
+    background: rgb(234, 244, 221);
+    border-radius: 0.39em;
+}
+.cafe-restaurant .iconify {
+    border-radius: 50%;
+    padding: 0.5em;
+    background-color: white;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+.cafe-restaurant h5 {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+}
+.cafe-restaurant h4 {
+    position: absolute;
+    top: 65%;
+    left: 10%;
+}
+.health-care{
+    width: 29%;
+    border: 0.15em solid rgb(173, 173, 173,0.2); 
+    border-radius: 0.39em;
+    position: relative;
+}
+.health-care .iconify {
+    border-radius: 50%;
+    padding: 0.5em;
+    background-color: rgb(247, 247, 247);
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+.health-care h5 {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+}
+.health-care h4 {
+    position: absolute;
+    top: 65%;
+    left: 10%;
+}
+
+.shopping{
+    width: 29%;
+    border-radius: 0.39em;
+    position: relative;
+    border: 0.15em solid rgb(173, 173, 173,0.2);
+}
+.shopping .iconify {
+    border-radius: 50%;
+    padding: 0.5em;
+    background-color: rgb(247, 247, 247);
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+.shopping h5 {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+}
+.shopping h4 {
+    position: absolute;
+    top: 65%;
+    left: 10%;
+}
+
+.utilities-move-left{
+    background-color: rgb(247, 247, 247);
+    border-radius: 0.39em;
+    width: 5%;
+    position: relative;
+}
+
+.utilities-move-left .iconify {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1rem;
+}
+.schedule-of-costs h3 {
+    margin-top: 1.5em;
+    font-weight: 600;
+}
+
+/*  ........................transaction area ........................................................ */
+.transactions-area{
+    padding: 1.6em;
+    width: 30%;
+    /* border: 1px solid grey; */
+    border-left: 0.15em solid rgb(173, 173, 173,0.2);
+    background: white;
+    border-top-right-radius: 0.39em;
+    border-bottom-right-radius: 0.39em;
+}   
+/* transaction header */
+.transactions-area header {
+    position: relative;
+    /* margin-bottom: 1.5em; */
+}
+
+.transactions-area h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.transactions-area header h4 {
+    position: absolute;
+    font-weight: 500;
+    color: rgb(173, 173, 173);
+    right: 0;
+    top: 0.4em;
+}
+.transactions-area header h4 i {
+    margin-left: 0.4em;
+    font-size: 0.7rem;
+}
+
+.transactions-area nav {
+    margin-top: 0.3em;
+    margin-bottom: 0.9em;
+}
+.transactions-area li {
+    font-size: 1rem;
+    font-weight: 500;
+    display: inline-block;
+    color: rgb(173, 173, 173);
+    /* border: 1px solid black; */
+    width: 25%;
+    /* margin-right: 0.5em; */
+    padding-right: 0.45em;
+    
+}
+.transactions-area li:first-child {
+    width: 10%;
+    padding-right: 0.9em;
+}
+
+/* all transactions block area  */
+
+.transaction-details {
+    position: relative;
+    border-bottom: 0.15em solid rgb(173, 173, 173,0.2);
+    height:12.5%;
+}
+
+.transaction-details i {
+    background-color: rgb(247, 247, 247);
+    padding: 0.8em;
+    border-radius: 50%;
+    position: absolute;
+    top: 22%;
+    left:0;
+}
+
+.transaction-details  .amount{
+    position: absolute;
+    top:30%;
+    right:0;
+    
+}
+
+.transaction-details .expense {
+    position: absolute;
+    top: 22%;
+    left: 18%;
+    /* font-size: 1rem; */
+}
+.transaction-details h5 {
+    position: absolute;
+    top: 50%;
+    left: 18%;
+    color: rgb(173, 173, 173);
+    font-weight: 500;
+}
+
+.black-area {
+    box-sizing: border-box;
+    height: 22%;
+    margin-top: 0.7em;
+    background: rgb(35, 35, 35);
+    border-radius: 0.39em;
+    color: white;
+    padding: 1em;
+}
+
+.black-area h6 {
+    margin-top: 1.5em;
+}
+.black-area h6 i {
+    padding: 1em;
+    font-size: 0.5rem;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card design</title>
+    <script src="https://kit.fontawesome.com/9516eaadc9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="card.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div  class="nav-area">
+            <div class="image-area"><img src="32037470.jpg" alt="passport"></div>
+            <h2 class="user-name">Joy Ikhide</h2>
+            <h3 class="user-email">joyikhide@mail.com</h3>
+            <nav>
+                <ul class="ul1">
+                    <li><a href="#"></a><span class="iconify-inline" data-icon="ci:dashboard"></span>Dashboard</li>
+                    <li><a href="#"></a><span class="iconify-inline" data-icon="whh:analytics"></span>Analytics</li>
+                    <li><a href="#"></a><span class="iconify-inline" data-icon="ant-design:calendar-filled"></span>Calendar</li>
+                    <li><a href="#"></a><span class="iconify-inline" data-icon="ic:sharp-contact-support"></span>Support</li>
+                    <li><a href="#"></a><span class="iconify-inline" data-icon="ci:settings-filled"></span>Settings</li>
+                    
+                </ul>
+                <ul class="ul2">
+                <li><a href="#"></a><span class="iconify-inline" data-icon="simple-line-icons:logout"></span>Log Out</li>
+                </ul>   
+            </nav>
+        </div>
+
+<!-- -------------------------------------------------------main area-------------------------------------------------------------------------------- -->
+        
+        
+        <div class="main-area">
+            <header>
+                <h1>Dashboard</h1>
+                <h5 class="date"> 20 Oct 2021 &#183; 12:28</h5>
+                <button class="update">Update</button>
+                <i class="fas fa-bell"></i>
+            </header>
+            <div class="your-balance">
+                <h4>Your balance:</h4>
+                <h2>$28,200</h2>
+                <h5>****1234</h5>
+            </div>
+            <div class="weekly-transaction">
+                <div class="vertical-line first"></div>
+                <div class="vertical-line second"></div>
+                <div class="vertical-line third"></div>
+                <section class="week-select-section">
+                    <h4>Last Week</h4>
+                    <select class="last-week" name="choose-week" id="choose-week">
+                        <option  value="last-week"></option>
+                    </select>
+                    <!-- <h4>Last Week</h4>
+                    <span class="iconify" data-icon="mdi:greater-than" data-rotate="90deg" data-flip="vertical"></span> -->
+                </section>
+                <section class="transaction-number">
+                    <h5>Transactions</h5>
+                    <h4>48</h4>
+                </section>
+                <section class="total-spent">
+                    <h5>Total Spent</h5>
+                    <h4>$1245.30</h4>
+                </section>
+                <section class="cashback">
+                    <h5>Cashback</h5>
+                    <h4>$138.56</h4>
+                </section>
+            </div>
+            <div class="utilities">
+                <section class="cafe-restaurant">
+                    <span class="iconify" data-icon="mdi:hamburger" data-flip="horizontal"></span>
+                    <h5>Cafe And <br>Restaurant</h5>
+                    <h4>$138.56</h4>
+                </section>
+                <section class="health-care">
+                    <span class="iconify" data-icon="ps:lovedsgn" data-flip="horizontal"></span>
+                    <h5>Health and Care</h5>
+                    <h4>$138.56</h4>
+                </section>
+                <section class="shopping">
+                    <span class="iconify" data-icon="bx:bxs-shopping-bag" data-flip="horizontal"></span>
+                    <h5>Shopping</h5>
+                    <h4>$138.56</h4>
+                </section>
+                <section class="utilities-move-left">
+                    <span class="iconify" data-icon="ic:sharp-greater-than" data-flip="vertical"></span>
+                </section>
+            </div>
+            <div class="schedule-of-costs">
+                <h3>Schedule of costs</h3>
+                <div class="dateA-dateB"></div>
+                <!-- <i class="fas fa-cog"></i> -->
+            </div>
+        </div>
+        
+<!-------------------------------------------------------- transaction area -------------------------------------------------- -->
+        <div class="transactions-area">
+            <header>
+                <h1>Transactions</h1>
+                <h4>view all <i class="fas fa-greater-than"></i></h4>
+                <nav>
+                    <ul>
+                        <li>All</li>
+                        <li>Revenue</li>
+                        <li>Expenses</li>
+                    </ul>
+                </nav>
+            </header>
+            <section class="transaction-details">
+                <i class="fas fa-hamburger"></i>
+                <h4 class="expense">Central Burger</h4>
+                <h5>Cafe and Restaurant</h5>
+                <h4 class="amount">-$138.56</h4>
+            </section>
+            <section class="transaction-details">
+                <i class="fas fa-heartbeat"></i>
+                <h4 class="expense">Health Pharmacy</h4>
+                <h5>Health and Care</h5>
+                <h4 class="amount">-$530.37</h4>
+            </section>
+            <section class="transaction-details">
+                <i class="fas fa-download"></i>
+                <h4 class="expense">IBON Terminal</h4>
+                <h5>Card replenishment</h5>
+                <h4 class="amount">$400.00</h4>
+            </section>
+            <section class="transaction-details">
+                <i class="fas fa-cocktail"></i>
+                <h4 class="expense">Moloko Open</h4>
+                <h5>Cafe and Restaurant</h5>
+                <h4 class="amount">-$20.48</h4>
+            </section>
+            <section class="transaction-details">
+                <i class="fas fa-shopping-bag"></i>
+                <h4 class="expense">Zara Home</h4>
+                <h5>Shopping</h5>
+                <h4 class="amount">-$250.20</h4>
+            </section>
+            <div class="black-area">
+                <h4>How to reduce spending <br> by 20%</h4>
+                <h6>Tell me more<i class="fas fa-greater-than"></i></h6>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+</body>
+</html>
