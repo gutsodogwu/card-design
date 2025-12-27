@@ -661,16 +661,19 @@ nav .ul2 li:hover {
 
 .transaction-details .expense {
     position: absolute;
-    top: 22%;
+    top: 20%;
     left: 18%;
-    /* font-size: 1rem; */
+    font-weight: 600;
+    line-height: 1.2;
 }
 .transaction-details h5 {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 18%;
     color: rgb(173, 173, 173);
     font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0.3em;
 }
 
 .black-area {
