@@ -616,14 +616,17 @@ nav .ul2 li:hover {
 /* all transactions block area  */
 
 .transaction-details {
-    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1em;
     border-bottom: 0.15em solid rgb(173, 173, 173,0.2);
-    height:12.5%;
+    min-height: 4.5em;
     transition: all var(--transition-fast);
     cursor: pointer;
-    padding: 0.5em;
+    padding: 0.8em 0.5em;
     margin: 0 -0.5em;
     border-radius: 8px;
+    position: relative;
 }
 
 .transaction-details:hover {
@@ -640,11 +643,9 @@ nav .ul2 li:hover {
     background-color: rgb(247, 247, 247);
     padding: 0.8em;
     border-radius: 50%;
-    position: absolute;
-    top: 22%;
-    left:0;
     transition: all var(--transition-med);
     box-shadow: var(--shadow-sm);
+    flex-shrink: 0;
 }
 
 .transaction-details:hover i {
@@ -652,28 +653,33 @@ nav .ul2 li:hover {
     box-shadow: var(--shadow-md);
 }
 
-.transaction-details  .amount{
-    position: absolute;
-    top:30%;
-    right:0;
-    
+.transaction-details .amount {
+    margin-left: auto;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .transaction-details .expense {
-    position: absolute;
-    top: 20%;
-    left: 18%;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
+    margin-bottom: 0.2em;
 }
+
 .transaction-details h5 {
-    position: absolute;
-    top: 55%;
-    left: 18%;
     color: rgb(173, 173, 173);
     font-weight: 500;
-    line-height: 1.2;
-    margin-top: 0.3em;
+    line-height: 1.3;
+    font-size: 0.85rem;
+}
+
+/* Text content wrapper */
+.transaction-details > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    flex: 1;
+    min-width: 0;
 }
 
 .black-area {
@@ -877,16 +883,17 @@ nav .ul2 li:hover {
     }
 
     .transaction-details {
-        height: 4em;
+        min-height: 4em;
         margin-bottom: 0.5em;
+        padding: 0.6em 0.5em;
     }
 
     .transaction-details .expense {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 
     .transaction-details h5 {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
     }
 
     .black-area {
@@ -906,12 +913,10 @@ nav .ul2 li:hover {
     }
 
     .transaction-details .expense {
-        font-size: 0.85rem;
-        left: 20%;
+        font-size: 0.9rem;
     }
 
     .transaction-details h5 {
-        font-size: 0.7rem;
-        left: 20%;
+        font-size: 0.75rem;
     }
 }
