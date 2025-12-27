@@ -1,11 +1,12 @@
 * {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box;  */
+    box-sizing: border-box;
 }
 body {
     font-family: 'Outfit', sans-serif;
     background: rgb(111, 111, 111);
+    overflow-x: hidden;
 }
 /* explicitly define the container properties */
 .container {
@@ -476,17 +477,24 @@ nav .ul2 {
 
 /* Mobile Responsive Design */
 @media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
     .container {
         flex-direction: column;
-        width: 95%;
+        width: 100%;
         height: auto;
-        margin: 0.5em auto;
+        margin: 0;
+        overflow-x: hidden;
     }
 
     .nav-area {
         width: 100%;
-        border-radius: 10px 10px 0 0;
+        border-radius: 0;
         padding: 1em;
+        box-sizing: border-box;
     }
 
     .nav-area nav {
@@ -509,6 +517,8 @@ nav .ul2 {
         width: 100%;
         border-radius: 0;
         padding: 1em;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     .main-area header {
@@ -533,15 +543,24 @@ nav .ul2 {
         display: none;
     }
 
+    .your-balance {
+        margin-bottom: 1em;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
     .weekly-transaction {
         flex-direction: column;
         height: auto;
         padding: 1em;
+        box-sizing: border-box;
+        overflow: hidden;
     }
 
     .weekly-transaction section {
         width: 100% !important;
         padding: 0.5em 0;
+        box-sizing: border-box;
     }
 
     .weekly-transaction .vertical-line {
@@ -576,6 +595,8 @@ nav .ul2 {
         flex-direction: column;
         height: auto;
         gap: 0.8em;
+        box-sizing: border-box;
+        overflow: hidden;
     }
 
     .cafe-restaurant,
@@ -584,6 +605,7 @@ nav .ul2 {
         width: 100%;
         padding: 1em;
         height: 4em;
+        box-sizing: border-box;
     }
 
     .utilities-move-left {
@@ -593,9 +615,12 @@ nav .ul2 {
 
     .transactions-area {
         width: 100%;
-        border-radius: 0 0 10px 10px;
+        border-radius: 0;
         border-left: none;
         border-top: 0.15em solid rgb(173, 173, 173, 0.2);
+        padding: 1em;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     .transactions-area h1 {
