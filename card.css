@@ -436,29 +436,16 @@ nav .ul2 li:hover {
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-med);
     cursor: pointer;
-    overflow: hidden;
-}
-
-.cafe-restaurant::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #8bc34a 0%, #689f38 100%);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform var(--transition-med);
-}
-
-.cafe-restaurant:hover::after {
-    transform: scaleX(1);
+    overflow: visible;
 }
 
 .cafe-restaurant:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+.cafe-restaurant:active {
+    transform: translateY(-4px) scale(0.98);
 }
 .cafe-restaurant .iconify {
     border-radius: 50%;
@@ -486,29 +473,16 @@ nav .ul2 li:hover {
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-med);
     cursor: pointer;
-    overflow: hidden;
-}
-
-.health-care::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #e91e63 0%, #c2185b 100%);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform var(--transition-med);
-}
-
-.health-care:hover::after {
-    transform: scaleX(1);
+    overflow: visible;
 }
 
 .health-care:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+.health-care:active {
+    transform: translateY(-4px) scale(0.98);
 }
 .health-care .iconify {
     border-radius: 50%;
@@ -537,29 +511,16 @@ nav .ul2 li:hover {
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-med);
     cursor: pointer;
-    overflow: hidden;
-}
-
-.shopping::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #3f51b5 0%, #303f9f 100%);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform var(--transition-med);
-}
-
-.shopping:hover::after {
-    transform: scaleX(1);
+    overflow: visible;
 }
 
 .shopping:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+.shopping:active {
+    transform: translateY(-4px) scale(0.98);
 }
 .shopping .iconify {
     border-radius: 50%;

@@ -380,7 +380,7 @@ function setupBalanceCardFlip() {
     });
 }
 
-// Add Progress Bars to Utility Cards
+// Add Progress Circles to Utility Cards
 function addSpendingProgress() {
     const utilityCards = [
         { selector: '.cafe-restaurant', color: '#8bc34a', percent: 65 },
@@ -390,37 +390,46 @@ function addSpendingProgress() {
 
     utilityCards.forEach(card => {
         const element = document.querySelector(card.selector);
-        if (element && !element.querySelector('.progress-bar')) {
-            const progressBar = document.createElement('div');
-            progressBar.className = 'progress-bar';
-            progressBar.style.cssText = `
+        if (element && !element.querySelector('.progress-circle')) {
+            const progressCircle = document.createElement('div');
+            progressCircle.className = 'progress-circle';
+            progressCircle.style.cssText = `
                 position: absolute;
-                bottom: 8px;
-                left: 10%;
-                width: 80%;
-                height: 4px;
-                background: rgba(0, 0, 0, 0.1);
-                border-radius: 2px;
-                overflow: hidden;
+                top: 8px;
+                right: 8px;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                background: conic-gradient(${card.color} 0deg, rgba(0,0,0,0.1) 0deg);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.65rem;
+                font-weight: 700;
+                color: ${card.color};
+                transition: transform 0.3s ease;
             `;
 
-            const progressFill = document.createElement('div');
-            progressFill.className = 'progress-fill';
-            progressFill.style.cssText = `
-                height: 100%;
-                background: ${card.color};
-                width: 0;
-                transition: width 1s ease-out;
-                border-radius: 2px;
+            const innerCircle = document.createElement('div');
+            innerCircle.style.cssText = `
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                background: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             `;
+            innerCircle.textContent = card.percent + '%';
 
-            progressBar.appendChild(progressFill);
-            element.appendChild(progressBar);
+            progressCircle.appendChild(innerCircle);
+            element.appendChild(progressCircle);
 
-            // Animate progress
+            // Animate progress circle
             setTimeout(() => {
-                progressFill.style.width = card.percent + '%';
-            }, 500);
+                const degrees = (card.percent / 100) * 360;
+                progressCircle.style.background = `conic-gradient(${card.color} ${degrees}deg, rgba(0,0,0,0.1) ${degrees}deg)`;
+            }, 300);
         }
     });
 }
